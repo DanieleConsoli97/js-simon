@@ -11,3 +11,18 @@ for (let i = 0; i < 5; i++) {
      console.log(numeroRandom())
      numberList.append(li)
 }
+let count = parseInt("5")
+
+const contatore = setInterval ( () =>{
+  count--
+  countDown.innerHTML= count
+    if(count === 0){
+      const zeroShow = setInterval(()=>{
+        countDown.classList.add(`d-none`)
+        clearInterval(contatore)
+        clearInterval(zeroShow)
+        answersForm.classList.remove(`d-none`)
+      },1000)
+      
+    }
+}, 1000)
