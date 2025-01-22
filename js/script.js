@@ -27,7 +27,8 @@ const contatore = setInterval(() => {
     }, 1000);
   }
 }, 1000);
-bottone.addEventListener("click", () => {
+bottone.addEventListener("click", (event) => {
+  event.preventDefault()
   let input = inputGroup.querySelectorAll(`.form-control`);
   let numeriGenerati = document.querySelectorAll(`ul>li`);
   
